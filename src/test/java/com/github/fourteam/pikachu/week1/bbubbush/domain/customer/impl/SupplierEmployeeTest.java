@@ -17,7 +17,6 @@ import java.util.LinkedList;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
-@RunWith(MockitoJUnitRunner.class)
 public class SupplierEmployeeTest {
     @Test
     public void checkCustomerStatus_success() {
