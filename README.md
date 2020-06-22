@@ -1,7 +1,7 @@
 # baguette-testcode
 
-![image](https://user-images.githubusercontent.com/33277588/85240018-84c49000-b471-11ea-8d7b-c874b6213196.png){: width="300" height="300"){: .left}
 
+<left><img src="https://user-images.githubusercontent.com/33277588/85240018-84c49000-b471-11ea-8d7b-c874b6213196.png" width="300" height="300"></left>
 
 # 바게트 TDD
 
