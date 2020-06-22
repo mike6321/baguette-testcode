@@ -9,4 +9,12 @@ public interface Cunsumer {
      *
      */
     boolean checkCustomerStatus();
+
+    /**
+     * Name: 회원이 가진 포인트가 존재하는지 확인
+     * Date: 2020/06/22
+     * Info:
+     *
+     */
+    boolean chkPoint();
 }

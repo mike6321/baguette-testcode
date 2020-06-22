@@ -4,9 +4,13 @@ import com.github.fourteam.pikachu.week1.bbubbush.domain.customer.Customer;
 import lombok.Builder;
 import lombok.Getter;
 
-@Getter
 public class BlackCustomer implements Customer {
-    private Long point;
+    final private Long point;
+
+    public BlackCustomer (Long point) {
+        this.point = point;
+    }
+
     /**
      * Name: 주문가능상태 확인
      * Date: 2020/06/12
@@ -18,9 +22,16 @@ public class BlackCustomer implements Customer {
         return false;
     }
 
-    @Builder
-    public BlackCustomer () {
-
+    /**
+     * Name: 회원의 포인트 존재여부 추가
+     * Date: 2020/06/22
+     * Info:
+     *
+     */
+    @Override
+    public boolean chkPoint() {
+        return point > 0L;
     }
+
 
 }

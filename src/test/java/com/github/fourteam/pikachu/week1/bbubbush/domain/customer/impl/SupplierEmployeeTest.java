@@ -1,5 +1,6 @@
 package com.github.fourteam.pikachu.week1.bbubbush.domain.customer.impl;
 
+import com.github.fourteam.pikachu.week1.bbubbush.domain.customer.Cunsumer;
 import com.github.fourteam.pikachu.week1.bbubbush.domain.customer.Employee;
 import com.github.fourteam.pikachu.week1.bbubbush.domain.product.impl.NullProduct;
 import com.github.fourteam.pikachu.week1.bbubbush.domain.product.Product;
@@ -18,39 +19,62 @@ import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class SupplierEmployeeTest {
-    private Employee canOrderEmployee;
-    private Employee canNotOrderEmployee;
-    @Mock
-    private List<Product> mockProducts;
-    @InjectMocks
-    private SupplierEmployee mockSupplierEmployee;
+    @Test
+    public void checkCustomerStatus_success() {
+        // given
+        List<Product> mockProducts = mock(List.class);
+        Cunsumer customer = SupplierEmployee.builder()
+                    .point(0L)
+                    .supplyProducts(mockProducts)
+                    .build();
+        when(mockProducts.size()).thenReturn(10);
 
-    @Before
-    public void setUp() {
-        LinkedList<Product> products = new LinkedList<>();
-        products.add(new NullProduct());
-        products.add(new NullProduct());
-        products.add(new NullProduct());
+        // when
+        boolean guessTrue = customer.checkCustomerStatus();
 
-        canOrderEmployee = SupplierEmployee.builder().supplyProducts(products).build();
-        canNotOrderEmployee = SupplierEmployee.builder().supplyProducts(new LinkedList<Product>()).build();
+        // then
+        assertTrue(guessTrue);
     }
 
     @Test
-    public void 주문가능상태_확인() {
-        boolean guessPass = canOrderEmployee.checkCustomerStatus();
-        boolean guessFail = canNotOrderEmployee.checkCustomerStatus();
-
-        assertTrue(guessPass);
-        assertFalse(guessFail);
-    }
-
-    @Test
-    public void mock객체_테스트() {
+    public void checkCustomerStatus_fail() {
+        // given
+        List<Product> mockProducts = mock(List.class);
+        Cunsumer customer = SupplierEmployee.builder()
+                .point(0L)
+                .supplyProducts(mockProducts)
+                .build();
         when(mockProducts.size()).thenReturn(2);
 
-//        when(mockSupplierEmployee.checkCustomerStatus()).thenReturn(Boolean.FALSE);
-        assertFalse(mockSupplierEmployee.checkCustomerStatus());
+        // when
+        boolean guessFalse = customer.checkCustomerStatus();
+
+        // then
+        assertFalse(guessFalse);
+    }
+
+    @Test
+    public void chkPoint_success() {
+        // given
+        Cunsumer customer = SupplierEmployee.builder().point(1L).build();
+
+        // when
+        boolean guessTrue = customer.chkPoint();
+
+        // then
+        assertTrue(guessTrue);
+    }
+
+    @Test
+    public void chkPoint_fail() {
+        // given
+        Cunsumer customer = SupplierEmployee.builder().point(0L).build();
+
+        // when
+        boolean guessTrue = customer.chkPoint();
+
+        // then
+        assertFalse(guessTrue);
     }
 
 }
