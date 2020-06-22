@@ -5,7 +5,6 @@ import lombok.Builder;
 import lombok.Getter;
 import java.time.LocalDate;
 
-@Getter
 public class ShopEmployee implements Employee {
     private Long point;
     private LocalDate retireDate;
@@ -25,5 +24,16 @@ public class ShopEmployee implements Employee {
     @Override
     public boolean checkCustomerStatus() {
         return point > 0L && retireDate == null;
+    }
+
+    /**
+     * Name: 포인트 확인
+     * Date: 2020/06/22
+     * Info:
+     *
+     */
+    @Override
+    public boolean chkPoint() {
+        return point > 0L;
     }
 }

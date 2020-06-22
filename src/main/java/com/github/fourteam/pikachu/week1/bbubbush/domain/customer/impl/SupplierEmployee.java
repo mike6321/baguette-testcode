@@ -7,12 +7,13 @@ import lombok.Getter;
 
 import java.util.List;
 
-@Getter
 public class SupplierEmployee implements Employee {
+    private Long point;
     private List<Product> supplyProducts;
 
     @Builder
-    public SupplierEmployee(List<Product> supplyProducts) {
+    public SupplierEmployee(Long point, List<Product> supplyProducts) {
+        this.point = point;
         this.supplyProducts = supplyProducts;
     }
 
@@ -25,5 +26,16 @@ public class SupplierEmployee implements Employee {
     @Override
     public boolean checkCustomerStatus() {
         return supplyProducts.size() >= 3;
+    }
+
+    /**
+     * Name: 포인트 조회
+     * Date: 2020/06/22
+     * Info:
+     *
+     */
+    @Override
+    public boolean chkPoint() {
+        return point > 0L;
     }
 }
