@@ -1,8 +1,3 @@
-# baguette-testcode
-
-
-<left><img src="https://user-images.githubusercontent.com/33277588/85240018-84c49000-b471-11ea-8d7b-c874b6213196.png" width="150" height="150"></left>
-
 # 바게트 TDD
 
 ### 학습 목표
