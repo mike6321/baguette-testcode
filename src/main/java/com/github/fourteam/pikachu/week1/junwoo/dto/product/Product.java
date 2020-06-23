@@ -1,6 +1,5 @@
 package com.github.fourteam.pikachu.week1.junwoo.dto.product;
 
-import com.github.fourteam.pikachu.week1.junwoo.dto.role.Role;
 import lombok.*;
 
 /**
@@ -10,13 +9,20 @@ import lombok.*;
  * @comment :
  * Time : 12:22 오전
  */
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
-@EqualsAndHashCode(of = {"prdId"})
 public class Product {
-    private Integer prdId;
-    private Integer prdStk;
+    private final Long prdId;
+    private final Long prdStk;
+
+    public Product(Long prdId, Long prdStk) {
+        this.prdId = prdId;
+        this.prdStk = prdStk;
+    }
+
+    public Long getPrdId() {
+        return prdId;
+    }
+
+    public Long getPrdStk() {
+        return prdStk;
+    }
 }

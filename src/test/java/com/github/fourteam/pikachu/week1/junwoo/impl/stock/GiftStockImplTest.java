@@ -9,6 +9,8 @@ import org.mockito.MockitoAnnotations;
 import static org.mockito.BDDMockito.given;
 
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 /**
  * Project : pikachu
@@ -20,19 +22,18 @@ import static org.junit.Assert.*;
 public class GiftStockImplTest {
 
     private GiftStockImpl giftStock;
-
     private Gift gift;
 
 
     @Before
     public void setUp() {
         gift = new Gift(12345L,5);
-
-        //given(gift.getGiftId()).willReturn(true);
     }
 
     @Test
     public void checkGiftStck() {
+        GiftStockImpl mock = mock(GiftStockImpl.class);
+
 
     }
 }

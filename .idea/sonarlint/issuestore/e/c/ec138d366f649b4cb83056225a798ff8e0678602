@@ -1,0 +1,13 @@
+
+d
+java:S1192&"IDefine a constant instead of duplicating this literal "userName" 7 times.(Óí…óýÿÿÿÿ
+c
+java:S1192%"HDefine a constant instead of duplicating this literal "userId" 14 times.(§ÂâÝþÿÿÿÿ
+d
+java:S1192%"IDefine a constant instead of duplicating this literal "bbubbush" 7 times.(§ÂâÝþÿÿÿÿ
+c	java:S100$"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®‘æÜ
+h	java:S1004"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì„³Ÿýÿÿÿÿ
+h	java:S100E"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü“ç„úÿÿÿÿ
+h	java:S100a"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù×òçýÿÿÿÿ
+i	java:S100ƒ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ŒÅýúÿÿÿÿ
+V	java:S125;"<This block of commented-out lines of code should be removed.(¥Ô«èÿÿÿÿÿ

@@ -1,0 +1,11 @@
+
+C
+java:S1128"-Remove this unused import 'org.mockito.Mock'.(´ëò÷
+V
+java:S1128";Remove this unused import 'org.mockito.MockitoAnnotations'.(Õ©š¤þÿÿÿÿ
+C
+java:S1068"-Remove this unused "giftStock" private field.(ÜýÏ·
+K
+java:S1481#")Remove this unused "mock" local variable.(š¨Ííýÿÿÿÿ8Ö¡¡æ­.
+p
+java:S1450"SRemove the "gift" field and declare it as a local variable in the relevant methods.(ñæµ¸8Ö¡¡æ­.

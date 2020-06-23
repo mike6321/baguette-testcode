@@ -18,8 +18,11 @@ public class ProductStockImpl implements Stock {
         this.product = product;
     }
 
+    // TODO:  junwoochoi 2020/06/23 12:41 오전
+    // 리턴값은 재고가 있는 경우에는 true, 없는 경우에는 false로 한다.
     @Override
-    public boolean checkStock(Integer Id) {
-        return false;
+    public boolean checkStock() {
+        return product.getPrdStk() != 0;
     }
+
 }

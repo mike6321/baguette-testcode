@@ -1,7 +1,5 @@
 package com.github.fourteam.pikachu.week1.junwoo.dto.gift;
 
-import lombok.*;
-
 /**
  * Project : pikachu
  *
