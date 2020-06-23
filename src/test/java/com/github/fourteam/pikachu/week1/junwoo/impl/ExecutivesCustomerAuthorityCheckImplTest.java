@@ -3,6 +3,8 @@ package com.github.fourteam.pikachu.week1.junwoo.impl;
 
 import com.github.fourteam.pikachu.week1.junwoo.dto.cutomer.Customer;
 import com.github.fourteam.pikachu.week1.junwoo.dto.role.Role;
+import com.github.fourteam.pikachu.week1.junwoo.impl.authority.ExecutivesCustomerAuthorityCheckImpl;
+import com.github.fourteam.pikachu.week1.junwoo.interfaces.authority.AuthorityCheck;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -21,33 +23,34 @@ import static org.junit.Assert.*;
 public class ExecutivesCustomerAuthorityCheckImplTest {
 
     @Test
-    public void authorityCheck() {
+    public void authorityCheckt() {
+        Customer customer = Customer.builder()
+                .userId("bbubbush")
+                .point(0)
+                .role(Role.BLACKCONSUMER)
+                .build();
 
-        Customer customer0 = Customer.builder()
-                                    .role(Role.GENERAL)
-                                    .userId("mike6321")
-                                    .point(30)
-                                    .build();
+        assertNotNull(customer);
+        assertFalse("블랙컨슈머 고객은 주문이 불가합니다...",customer.getRole() == Role.BLACKCONSUMER);
 
-        Customer customer1 = Customer.builder()
-                                     .role(Role.GENERAL)
-                                     .userId("mesung")
-                                     .point(0)
-                                     .build();
-
-        List<Customer> customers = Arrays.asList(customer0, customer1);
-
-        for (Customer customer : customers) {
-            assertNotNull(customer);
-            assertTrue(customer.getUserId()+" 님 포인트가 0이므로 주문서에 접근할 수 없습니다.", customer.getPoint() != 0);
-            /*
-            * cusstomer.sendMessage(객체);
-            * Authority.check();
-            *
-            * */
-        }
+    }
 
 
+    @Test
+    public void 인증객체_사용() {
+        // given
+        Customer customer = Customer.builder()
+                .userId("bbubbush")
+                .point(0)
+                .role(Role.BLACKCONSUMER)
+                .build();
+        AuthorityCheck authorityCheck = new ExecutivesCustomerAuthorityCheckImpl();
+
+        // when
+        final boolean canHeOrder = authorityCheck.checkRole(customer);
+
+        // then
+        assertFalse(canHeOrder);
 
     }
 

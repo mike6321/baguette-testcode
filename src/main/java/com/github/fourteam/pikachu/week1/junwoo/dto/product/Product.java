@@ -9,20 +9,18 @@ import lombok.*;
  * @comment :
  * Time : 12:22 오전
  */
+@Builder
+//@Getter
 public class Product {
     private final Long prdId;
-    private final Long prdStk;
+    private final Integer prdStk;
 
-    public Product(Long prdId, Long prdStk) {
+    public Product(Long prdId, Integer prdStk) {
         this.prdId = prdId;
         this.prdStk = prdStk;
     }
 
-    public Long getPrdId() {
-        return prdId;
-    }
-
-    public Long getPrdStk() {
+    public Integer getPrdStk() {
         return prdStk;
     }
 }

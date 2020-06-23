@@ -14,14 +14,32 @@ import static org.mockito.Mockito.mock;
  * @comment :
  * Time : 1:10 오전
  */
-class ProductStockImplTest {
+public class ProductStockImplTest {
 
     private ProductStockImpl productStock;
     private Product product;
 
-    @Before
-    public void setUp() {
-        product = new Product(1234l,1234l);
+    @Test
+    public void checkStock() {
+        Product productMock = product.builder().prdId(1234L)
+                .prdStk(20)
+                .build();
+
+        Product productMockNothing = product.builder().prdId(1234L)
+                .prdStk(0)
+                .build();
+
+
+        productStock = new ProductStockImpl(productMock);
+        boolean result = productStock.checkStock();
+        assertTrue(result);
+
+
+        productStock = new ProductStockImpl(productMockNothing);
+        result = productStock.checkStock();
+        assertTrue(result);
+
+
     }
 
 

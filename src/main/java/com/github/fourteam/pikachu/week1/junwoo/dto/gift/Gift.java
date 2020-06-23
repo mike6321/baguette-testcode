@@ -1,5 +1,9 @@
 package com.github.fourteam.pikachu.week1.junwoo.dto.gift;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * Project : pikachu
  *
@@ -7,17 +11,15 @@ package com.github.fourteam.pikachu.week1.junwoo.dto.gift;
  * @comment :
  * Time : 12:42 오전
  */
+@Builder
+//@Getter
 public class Gift {
-    private Long giftId;
-    private Integer giftStk;
+    private final Integer giftStk;
+    private final Integer giftId;
 
-    public Gift(Long giftId, Integer giftStk) {
+    public Gift(Integer giftId, Integer giftStk) {
         this.giftId = giftId;
         this.giftStk = giftStk;
-    }
-
-    public Long getGiftId() {
-        return giftId;
     }
 
     public Integer getGiftStk() {

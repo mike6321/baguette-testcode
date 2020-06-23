@@ -12,14 +12,18 @@ import lombok.*;
  */
 @Builder
 @AllArgsConstructor
-@NoArgsConstructor
-@Getter @Setter
-@EqualsAndHashCode(of = {"userId"})
 public class Customer {
     private String userId;
-    private String userName;
     private Role role;
     private Integer point;
+
+    public Role getRole() {
+        return role;
+    }
+
+    public Integer getPoint() {
+        return point;
+    }
 
 
 }
