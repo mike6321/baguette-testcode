@@ -8,5 +8,5 @@ package com.github.fourteam.pikachu.week1.junwoo.interfaces.stock;
  * Time : 12:39 오전
  */
 public interface Stock {
-    boolean checkStock(Integer Id);
+    boolean checkStock();
 }
