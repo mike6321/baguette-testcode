@@ -10,7 +10,7 @@ public class SalesProduct implements Product {
     private long code;
     private long stock;
     private long price;
-    private GiftProduct gift;
+    private GiftProduct giftProduct;
 
     @Override
     public long getCode() {
@@ -19,15 +19,15 @@ public class SalesProduct implements Product {
 
     @Override
     public GiftProduct getGiftProduct() {
-        return gift;
+        return giftProduct;
     }
 
     @Builder
-    public SalesProduct(long code, long stock, long price, GiftProduct gift) {
+    public SalesProduct(long code, long stock, long price, GiftProduct giftProduct) {
         this.code = code;
         this.stock = stock;
         this.price = price;
-        this.gift = gift;
+        this.giftProduct = giftProduct;
     }
 
     /**
