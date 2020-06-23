@@ -3,6 +3,7 @@ package com.github.fourteam.pikachu.week1.junwoo.impl;
 import com.github.fourteam.pikachu.week1.junwoo.dto.cutomer.Customer;
 import com.github.fourteam.pikachu.week1.junwoo.dto.role.Role;
 import com.github.fourteam.pikachu.week1.junwoo.impl.authority.ExecutivesCustomerAuthorityCheckImpl;
+import com.github.fourteam.pikachu.week1.junwoo.impl.authority.GeneralCustomerAuthorityCheckImpl;
 import com.github.fourteam.pikachu.week1.junwoo.interfaces.authority.AuthorityCheck;
 import org.junit.Test;
 
@@ -20,7 +21,6 @@ public class GeneralCustomerAuthorityCheckImplTest {
     public void authorityCheckt() {
         Customer customer = Customer.builder()
                                     .userId("bbubbush")
-                                    .userName("이상훈")
                                     .point(0)
                                     .role(Role.BLACKCONSUMER)
                                     .build();
@@ -36,11 +36,10 @@ public class GeneralCustomerAuthorityCheckImplTest {
         // given
         Customer customer = Customer.builder()
                 .userId("bbubbush")
-                .userName("이상훈")
                 .point(0)
                 .role(Role.BLACKCONSUMER)
                 .build();
-        AuthorityCheck authorityCheck = new ExecutivesCustomerAuthorityCheckImpl();
+        AuthorityCheck authorityCheck = new GeneralCustomerAuthorityCheckImpl();
 
         // when
         final boolean canHeOrder = authorityCheck.checkRole(customer);
