@@ -1,8 +1,9 @@
 package com.github.fourteam.pikachu.week1.bbubbush.domain.customer.impl;
 
 import com.github.fourteam.pikachu.week1.bbubbush.domain.customer.Employee;
+import com.github.fourteam.pikachu.week1.bbubbush.domain.product.Product;
 import lombok.Builder;
-import lombok.Getter;
+
 import java.time.LocalDate;
 
 public class ShopEmployee implements Employee {
@@ -35,5 +36,10 @@ public class ShopEmployee implements Employee {
     @Override
     public boolean chkPoint() {
         return point > 0L;
+    }
+
+    @Override
+    public boolean checkGift(Product product) {
+        return product.getGiftProduct() == null;
     }
 }

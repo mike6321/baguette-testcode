@@ -1,21 +1,18 @@
 package com.github.fourteam.pikachu.week1.bbubbush.domain.customer.impl;
 
 import com.github.fourteam.pikachu.week1.bbubbush.domain.customer.Cunsumer;
-import com.github.fourteam.pikachu.week1.bbubbush.domain.customer.Employee;
-import com.github.fourteam.pikachu.week1.bbubbush.domain.product.impl.NullProduct;
+import com.github.fourteam.pikachu.week1.bbubbush.domain.product.GiftProduct;
 import com.github.fourteam.pikachu.week1.bbubbush.domain.product.Product;
-import org.junit.Before;
+import com.github.fourteam.pikachu.week1.bbubbush.domain.product.impl.SalesProduct;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.Mockito;
 
 import java.util.List;
-import java.util.LinkedList;
 
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class SupplierEmployeeTest {
     @Test
@@ -74,6 +71,43 @@ public class SupplierEmployeeTest {
 
         // then
         assertFalse(guessTrue);
+    }
+    @Test
+    public void checkGift_fail() {
+        // given
+        Cunsumer cunsumer = new SupplierEmployee(0L, null);
+        Product product = SalesProduct.builder()
+                .code(1L)
+                .stock(100L)
+                .price(20000)
+                .giftProduct(Mockito.mock(GiftProduct.class))
+                .build();
+        when(product.getGiftProduct().getStock()).thenReturn(9L);
+
+        // when
+        boolean guessFalse = cunsumer.checkGift(product);
+
+        // then
+        assertFalse(guessFalse);
+    }
+
+    @Test
+    public void checkGift_success() {
+        // given
+        Cunsumer cunsumer = new SupplierEmployee(0L, null);
+        Product product = SalesProduct.builder()
+                .code(1L)
+                .stock(100L)
+                .price(20000)
+                .giftProduct(Mockito.mock(GiftProduct.class))
+                .build();
+        when(product.getGiftProduct().getStock()).thenReturn(10L);
+
+        // when
+        boolean guessTrue = cunsumer.checkGift(product);
+
+        // then
+        assertTrue(guessTrue);
     }
 
 }

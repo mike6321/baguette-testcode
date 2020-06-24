@@ -1,6 +1,7 @@
 package com.github.fourteam.pikachu.week1.bbubbush.domain.customer.impl;
 
 import com.github.fourteam.pikachu.week1.bbubbush.domain.customer.Customer;
+import com.github.fourteam.pikachu.week1.bbubbush.domain.product.Product;
 import lombok.Builder;
 
 public class NormalCustomer implements Customer {
@@ -31,5 +32,10 @@ public class NormalCustomer implements Customer {
     @Override
     public boolean chkPoint() {
         return point > 0L;
+    }
+
+    @Override
+    public boolean checkGift(Product product) {
+        return product.getGiftProduct().getStock() > 0L;
     }
 }
