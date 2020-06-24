@@ -3,6 +3,7 @@ package com.github.fourteam.pikachu.week1.bbubbush.domain.customer.impl;
 import com.github.fourteam.pikachu.week1.bbubbush.domain.customer.Customer;
 import com.github.fourteam.pikachu.week1.bbubbush.domain.product.Product;
 import lombok.Builder;
+import lombok.Getter;
 
 /**
  * Name: 거래거절 고객
@@ -11,6 +12,7 @@ import lombok.Builder;
  *
  */
 public class ImpossibleOrderCustomer implements Customer {
+    @Getter
     private Long point;
 
     @Builder

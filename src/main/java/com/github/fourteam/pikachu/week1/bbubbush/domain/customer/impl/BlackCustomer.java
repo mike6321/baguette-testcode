@@ -2,8 +2,10 @@ package com.github.fourteam.pikachu.week1.bbubbush.domain.customer.impl;
 
 import com.github.fourteam.pikachu.week1.bbubbush.domain.customer.Customer;
 import com.github.fourteam.pikachu.week1.bbubbush.domain.product.Product;
+import lombok.Getter;
 
 public class BlackCustomer implements Customer {
+    @Getter
     final private Long point;
 
     public BlackCustomer (Long point) {
