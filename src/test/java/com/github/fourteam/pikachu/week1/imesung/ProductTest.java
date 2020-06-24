@@ -69,11 +69,12 @@ public class ProductTest {
         Customer customer = mock(Customer.class);
 
         //when
+        //그냥 Customer 생성? mock 활용?
         when(customer.getPoint()).thenReturn(4000L);
-        when(customer.chkPrdListInfo(products)).thenReturn(1);
+        when(customer.chkPrdListInfo(products)).thenReturn(true);
 
         //then
-        assertThat(customer.chkPrdListInfo(products), is(CoreMatchers.equalTo(1)));
+        assertTrue(customer.chkPrdListInfo(products));
 
     }
 }
