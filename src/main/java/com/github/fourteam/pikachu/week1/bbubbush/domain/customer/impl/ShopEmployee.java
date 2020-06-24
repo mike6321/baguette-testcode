@@ -3,10 +3,12 @@ package com.github.fourteam.pikachu.week1.bbubbush.domain.customer.impl;
 import com.github.fourteam.pikachu.week1.bbubbush.domain.customer.Employee;
 import com.github.fourteam.pikachu.week1.bbubbush.domain.product.Product;
 import lombok.Builder;
+import lombok.Getter;
 
 import java.time.LocalDate;
 
 public class ShopEmployee implements Employee {
+    @Getter
     private Long point;
     private LocalDate retireDate;
 

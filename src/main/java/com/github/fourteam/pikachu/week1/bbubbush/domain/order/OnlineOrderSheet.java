@@ -10,15 +10,13 @@ public class OnlineOrderSheet implements Order {
 
     @Override
     public boolean validationBeforeOrder(Cunsumer cunsumer, List<Product> products) {
-        return false;
+        return chkPrdListInfo(cunsumer.getPoint(), products);
     }
 
     private boolean chkPrdListInfo(final Long cunsumerPoint, final List<Product> products) {
-        return products.stream().filter(product -> cunsumerPoint > product.getPrice()).count() >= 10;
+        return products.stream().filter(product -> {
+            return cunsumerPoint > product.getPrice();
+        }).count() >= 10L;
     }
 
-    private boolean checkGift(final CustomerType customerType, final List<Product> products) {
-
-        return false;
-    }
 }
