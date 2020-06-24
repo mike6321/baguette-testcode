@@ -19,6 +19,8 @@ public class GiftTest {
     public void setUp() {
     }
 
+
+    //2주차 요구사항 2. 사은품에 대한 재고 체크
     @Test
     public void 사은품_재고확인() {
         //given

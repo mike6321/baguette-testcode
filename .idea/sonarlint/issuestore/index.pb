@@ -7,10 +7,6 @@ n
 >src/test/java/com/github/fourteam/sample/BasicMockitoTest.java,e/c/ec138d366f649b4cb83056225a798ff8e0678602
 m
 =src/test/java/com/github/fourteam/sample/InjectMocksTest.java,1/d/1dd679a3c93394a32c4a9b2e6b089daf8b0ee19f
-|
-Lsrc/main/java/com/github/fourteam/pikachu/week1/bbubbush/domain/Product.java,6/0/6039e01133dc0d1abec2069bd71de884a531147f
-}
-Msrc/main/java/com/github/fourteam/pikachu/week1/bbubbush/domain/Products.java,f/a/fac81a7c401c32a8e3fb9dfcfb920c05c4a36364
 ‚
 Rsrc/main/java/com/github/fourteam/pikachu/week1/junwoo/interfaces/stock/Stock.java,6/b/6bb5a4d986075334450380d461fba08820181aeb
 €
@@ -19,8 +15,6 @@ y
 Isrc/main/java/com/github/fourteam/pikachu/week1/junwoo/dto/role/Role.java,d/e/def70dc1779717075991f44ac3566542e88252cd
 Ÿ
 osrc/main/java/com/github/fourteam/pikachu/week1/junwoo/impl/authority/ExecutivesCustomerAuthorityCheckImpl.java,5/2/521cd7cda34657eaceffacc455fd0ccb8984a338
-„
-Tsrc/main/java/com/github/fourteam/pikachu/week1/junwoo/impl/authority/AdminImpl.java,e/3/e3d3d7bdcb735d6d0660fc2bd47c51843d052c32
 ‹
 [src/test/java/com/github/fourteam/pikachu/week1/junwoo/impl/stock/ProductStockImplTest.java,1/e/1efc96ca5bb0bc1b71f0c470adb78e38a311f230
 ‡
