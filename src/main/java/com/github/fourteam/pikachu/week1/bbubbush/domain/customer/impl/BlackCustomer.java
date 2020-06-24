@@ -1,8 +1,7 @@
 package com.github.fourteam.pikachu.week1.bbubbush.domain.customer.impl;
 
 import com.github.fourteam.pikachu.week1.bbubbush.domain.customer.Customer;
-import lombok.Builder;
-import lombok.Getter;
+import com.github.fourteam.pikachu.week1.bbubbush.domain.product.Product;
 
 public class BlackCustomer implements Customer {
     final private Long point;
@@ -31,6 +30,11 @@ public class BlackCustomer implements Customer {
     @Override
     public boolean chkPoint() {
         return point > 0L;
+    }
+
+    @Override
+    public boolean checkGift(Product product) {
+        return false;
     }
 
 

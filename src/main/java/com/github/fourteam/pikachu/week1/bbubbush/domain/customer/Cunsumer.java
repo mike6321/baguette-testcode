@@ -1,6 +1,8 @@
 package com.github.fourteam.pikachu.week1.bbubbush.domain.customer;
 
 
+import com.github.fourteam.pikachu.week1.bbubbush.domain.product.Product;
+
 public interface Cunsumer {
     /**
      * Name: 주문가능상태 확인
@@ -17,4 +19,6 @@ public interface Cunsumer {
      *
      */
     boolean chkPoint();
+
+    boolean checkGift(Product product);
 }

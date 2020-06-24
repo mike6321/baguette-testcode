@@ -1,6 +1,7 @@
 package com.github.fourteam.pikachu.week1.bbubbush.domain.customer.impl;
 
 import com.github.fourteam.pikachu.week1.bbubbush.domain.customer.Customer;
+import com.github.fourteam.pikachu.week1.bbubbush.domain.product.Product;
 import lombok.Builder;
 
 /**
@@ -29,7 +30,7 @@ public class ImpossibleOrderCustomer implements Customer {
     }
 
     /**
-     * Name: 포인트 확
+     * Name: 포인트 확인
      * Date: 2020/06/22
      * Info:
      *  인
@@ -37,5 +38,10 @@ public class ImpossibleOrderCustomer implements Customer {
     @Override
     public boolean chkPoint() {
         return point > 0L;
+    }
+
+    @Override
+    public boolean checkGift(Product product) {
+        return false;
     }
 }

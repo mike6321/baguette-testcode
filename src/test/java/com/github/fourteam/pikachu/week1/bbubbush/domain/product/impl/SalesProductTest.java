@@ -1,17 +1,12 @@
 package com.github.fourteam.pikachu.week1.bbubbush.domain.product.impl;
 
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
-import static org.mockito.Mockito.*;
-
 import com.github.fourteam.pikachu.week1.bbubbush.domain.product.Product;
-import com.github.fourteam.pikachu.week1.bbubbush.domain.product.impl.SalesGift;
-import com.github.fourteam.pikachu.week1.bbubbush.domain.product.impl.SalesProduct;
-import org.junit.Before;
 import org.junit.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class SalesProductTest {
     @Test
