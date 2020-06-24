@@ -46,12 +46,12 @@ public class Customer {
 		return this.point > 0L;
 	}
 
-	public int chkPrdListInfo(List<Product> products) {
+	public boolean chkPrdListInfo(List<Product> products) {
 		int chkCount = 0;
 		for(int i = 0; i < products.size(); i++) {
-			if(products.get(i).checkPrice() < this.point)
+			if(products.get(i).checkPrice() <= this.point)
 				chkCount++;
 		}
-		return chkCount;
+		return chkCount >= 10;
 	}
 }
