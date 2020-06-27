@@ -73,6 +73,7 @@ public class CustomerControllerTest {
                 .andExpect(content().string(containsString("\"userId\":\"mike6321\",\"role\":\"GENERAL\",\"point\":30")))
         ;
     }
+
     //{"role":"GENERAL","point":30}
     @Test
     public void Create() throws Exception {
@@ -83,7 +84,5 @@ public class CustomerControllerTest {
                 .andExpect(header().string("location","/Customer/mike6321"))
                 .andExpect(content().string("{}"))
         ;
-
-
     }
 }
