@@ -49,3 +49,5 @@ dsrc/test/java/com/github/fourteam/pikachu/week1/bbubbush/domain/order/impl/Onli
 [src/main/java/com/github/fourteam/pikachu/week1/bbubbush/domain/order/OnlineOrderSheet.java,6/2/62644ae1d45cbc2621e80f62279b94fda82e4f89
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+H
+FourTeam 요구사항.md,f/9/f96ece3a0112e095872913ad615d3ba8abc99531
