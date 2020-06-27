@@ -17,6 +17,10 @@ public class Customer {
     private Role role;
     private Integer point;
 
+    public Customer() {
+
+    }
+
     public String getUserId() {
         return userId;
     }

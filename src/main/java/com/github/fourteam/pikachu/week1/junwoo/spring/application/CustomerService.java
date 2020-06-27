@@ -1,7 +1,7 @@
 package com.github.fourteam.pikachu.week1.junwoo.spring.application;
 
 import com.github.fourteam.pikachu.week1.junwoo.spring.dto.Customer;
-import com.github.fourteam.pikachu.week1.junwoo.spring.interfaces.CustomerRepository;
+import com.github.fourteam.pikachu.week1.junwoo.spring.domain.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
