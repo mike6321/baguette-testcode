@@ -14,7 +14,6 @@ import com.github.fourteam.pikachu.week1.junwoo.interfaces.authority.AuthorityCh
 public class GeneralCustomerAuthorityCheckImpl implements AuthorityCheck {
     @Override
     public boolean checkRole(Customer customer) {
-
         return customer.getRole() != Role.BLACKCONSUMER;
     }
 }
