@@ -2,7 +2,6 @@ package com.github.fourteam.pikachu.week1.junwoo.spring.interfaces;
 
 import com.github.fourteam.pikachu.week1.junwoo.spring.application.AuthorityCheckGeneralCustomerService;
 import com.github.fourteam.pikachu.week1.junwoo.spring.dto.Customer;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.MediaTypes;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -25,9 +24,11 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 @RequestMapping(value = "/authority/general", produces = MediaTypes.HAL_JSON_VALUE)
 public class AuthorityCheckGeneralCustomerController {
 
-    @Autowired
     private AuthorityCheckGeneralCustomerService authorityCheckGeneralCustomerService;
 
+    public AuthorityCheckGeneralCustomerController(AuthorityCheckGeneralCustomerService authorityCheckGeneralCustomerService) {
+        this.authorityCheckGeneralCustomerService = authorityCheckGeneralCustomerService;
+    }
 
     @PostMapping
     public ResponseEntity checkRoleGeneralCustomer(@RequestBody Customer customer) {

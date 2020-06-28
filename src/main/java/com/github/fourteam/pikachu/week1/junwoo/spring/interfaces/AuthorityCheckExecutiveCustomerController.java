@@ -2,7 +2,6 @@ package com.github.fourteam.pikachu.week1.junwoo.spring.interfaces;
 
 import com.github.fourteam.pikachu.week1.junwoo.spring.application.AuthorityCheckExecutiveCustomerService;
 import com.github.fourteam.pikachu.week1.junwoo.spring.dto.Customer;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.MediaTypes;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -24,8 +23,11 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 @Controller
 @RequestMapping(value = "/authority/executive", produces = MediaTypes.HAL_JSON_VALUE)
 public class AuthorityCheckExecutiveCustomerController {
-    @Autowired
     AuthorityCheckExecutiveCustomerService authorityCheckExecutiveCustomerService;
+
+    public AuthorityCheckExecutiveCustomerController(AuthorityCheckExecutiveCustomerService authorityCheckExecutiveCustomerService) {
+        this.authorityCheckExecutiveCustomerService = authorityCheckExecutiveCustomerService;
+    }
 
     @PostMapping
     public ResponseEntity checkRoleExecutiveCustomer(@RequestBody Customer customer) {

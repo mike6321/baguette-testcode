@@ -1,9 +1,8 @@
 package com.github.fourteam.pikachu.week1.junwoo.spring.interfaces;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.github.fourteam.pikachu.week1.junwoo.spring.application.AuthorityCheckExecutiveCustomerService;
-import com.github.fourteam.pikachu.week1.junwoo.spring.dto.Customer;
-import com.github.fourteam.pikachu.week1.junwoo.spring.dto.Role;
+import com.github.fourteam.pikachu.week1.junwoo.spring.application.StockProductCheckService;
+import com.github.fourteam.pikachu.week1.junwoo.spring.dto.Product;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -25,11 +24,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  *
  * @author : jwdeveloper
  * @comment :
- * Time : 9:53 오후
+ * Time : 10:57 오후
  */
 @RunWith(SpringRunner.class)
-@WebMvcTest(AuthorityCheckExecutiveCustomerController.class)
-public class AuthorityCheckExecutiveCustomerControllerTest {
+@WebMvcTest(StockProductCheckController.class)
+public class StockProductCheckControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
@@ -37,22 +36,26 @@ public class AuthorityCheckExecutiveCustomerControllerTest {
     private ObjectMapper objectMapper;
 
     @MockBean
-    private AuthorityCheckExecutiveCustomerService authorityCheckExecutiveCustomerService;
+    private StockProductCheckService stockProductCheckService;
+
 
     @Test
-    public void checkRoleGeneralCustomerTest() throws Exception {
-        Customer customer = new Customer("mike6321", Role.EXECUTIVES,30);
+    public void StockProductCheckTest() throws Exception {
+        Product product = Product.builder()
+                                .prdId(12346544L)
+                                .prdStk(30)
+                                .build()
+        ;
+        when(stockProductCheckService.checkProductStock(product)).thenReturn(true);
 
-        when(authorityCheckExecutiveCustomerService.authorityCheck(customer)).thenReturn(true);
-
-        mockMvc.perform(post("/authority/executive")
+        mockMvc.perform(post("/stock/product")
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaTypes.HAL_JSON)
-                .content(objectMapper.writeValueAsString(customer))
-        )
+                .content(objectMapper.writeValueAsString(product))
+                )
                 .andDo(print())
                 .andExpect(status().isCreated())
-                .andExpect(jsonPath("userId").exists())
-        ;
+                .andExpect(jsonPath("prdId").exists())
+                ;
     }
 }

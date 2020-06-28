@@ -17,7 +17,7 @@ import java.util.List;
 @Component
 public class CustomerRepositoryImpl implements CustomerRepository {
 
-    final private List<Customer> customers = new ArrayList<>();
+    private final List<Customer> customers = new ArrayList<>();
 
     public CustomerRepositoryImpl() {
         customers.add(new Customer("mike6321", Role.GENERAL,30));

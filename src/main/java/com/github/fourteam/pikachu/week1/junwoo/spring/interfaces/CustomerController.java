@@ -24,21 +24,21 @@ public class CustomerController {
     @Autowired
     public CustomerService customerService;
 
-    @GetMapping("/Customer")
+    @GetMapping("/customer")
     public List<Customer> list() {
         final List<Customer> customerList = customerService.getCustomers();
 
         return customerList;
     }
 
-    @GetMapping("/Customer/{id}")
+    @GetMapping("/customer/{id}")
     public Customer detail(@PathVariable String id) {
         final Customer customer = customerService.getCustomer(id);
 
         return customer;
     }
 
-    @PostMapping("/Customer")
+    @PostMapping("/customer")
     public ResponseEntity<?> create(@RequestBody Customer customer) throws URISyntaxException {
         final String userId = customer.getUserId();
         final Integer point = customer.getPoint();
@@ -46,7 +46,7 @@ public class CustomerController {
 
         Customer customer1 = new Customer(userId, role, point);
 
-        URI location = new URI("/Customer/mike6321");//+customer1.getUserId());
+        URI location = new URI("/customer/mike6321");//+customer1.getUserId());
         ResponseEntity.created(location).body("{1234}");
         return ResponseEntity.created(location).body("{1234}");
     }
