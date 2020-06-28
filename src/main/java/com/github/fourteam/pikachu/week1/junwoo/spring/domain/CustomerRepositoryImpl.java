@@ -15,15 +15,15 @@ import java.util.List;
  * Time : 5:07 오후
  */
 @Component
-public class CustomerRepositoryImpl implements CustomerRepository{
+public class CustomerRepositoryImpl implements CustomerRepository {
 
-    private List<Customer> customers = new ArrayList<>();
+    final private List<Customer> customers = new ArrayList<>();
 
     public CustomerRepositoryImpl() {
         customers.add(new Customer("mike6321", Role.GENERAL,30));
         customers.add(new Customer("bbubbush", Role.BLACKCONSUMER,3));
         customers.add(new Customer("ssinsa", Role.EXECUTIVES,10));
-        customers.add(new Customer("ssinsa", Role.GENERAL,10));
+        customers.add(new Customer("mesung", Role.GENERAL,10));
     }
 
     @Override
