@@ -46,7 +46,7 @@ public class CustomerControllerTest {
 
         given(customerService.getCustomers()).willReturn(customers);
 
-        mockMvc.perform(get("/Customer"))
+        mockMvc.perform(get("/customer"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString("\"userId\":\"mike6321\"")))
                 .andExpect(content().string(containsString("\"role\":\"GENERAL\"")))
@@ -65,7 +65,7 @@ public class CustomerControllerTest {
         final Customer customer = new Customer("mike6321", Role.GENERAL,30);
         given(customerService.getCustomer("mike6321")).willReturn(customer);
 
-        mockMvc.perform(get("/Customer/mike6321"))
+        mockMvc.perform(get("/customer/mike6321"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString("\"userId\":\"mike6321\"")))
                 .andExpect(content().string(containsString("\"role\":\"GENERAL\"")))
@@ -79,7 +79,7 @@ public class CustomerControllerTest {
     public void Create() throws Exception {
 
         Customer customer = new Customer("mike6321",Role.GENERAL,30);
-        mockMvc.perform(post("/Customer")
+        mockMvc.perform(post("/customer")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\"role\":\"GENERAL\",\"point\":30}"))
                 .andExpect(status().isCreated())
