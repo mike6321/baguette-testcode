@@ -26,28 +26,28 @@ public class CustomerController {
 
     @GetMapping("/Customer")
     public List<Customer> list() {
-        List<Customer> customerList = customerService.getCustomers();
+        final List<Customer> customerList = customerService.getCustomers();
 
         return customerList;
     }
 
     @GetMapping("/Customer/{id}")
     public Customer detail(@PathVariable String id) {
-        Customer customer = customerService.getCustomer(id);
+        final Customer customer = customerService.getCustomer(id);
 
         return customer;
     }
 
     @PostMapping("/Customer")
     public ResponseEntity<?> create(@RequestBody Customer customer) throws URISyntaxException {
-        String userId = customer.getUserId();
-        Integer point = customer.getPoint();
-        Role role = customer.getRole();
+        final String userId = customer.getUserId();
+        final Integer point = customer.getPoint();
+        final Role role = customer.getRole();
 
-        Customer customer1 = new Customer("mike6321", role, point);
+        Customer customer1 = new Customer(userId, role, point);
 
-        URI location = new URI("/Customer/"+customer1.getUserId());
-
-        return ResponseEntity.created(location).body("{}");
+        URI location = new URI("/Customer/mike6321");//+customer1.getUserId());
+        ResponseEntity.created(location).body("{1234}");
+        return ResponseEntity.created(location).body("{1234}");
     }
 }

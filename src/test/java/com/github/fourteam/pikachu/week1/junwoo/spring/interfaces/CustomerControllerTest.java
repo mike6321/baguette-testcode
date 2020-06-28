@@ -41,7 +41,7 @@ public class CustomerControllerTest {
 
     @Test
     public void list() throws Exception {
-        List<Customer> customers = new ArrayList<>();
+        final List<Customer> customers = new ArrayList<>();
         customers.add(new Customer("mike6321", Role.GENERAL,30));
 
         given(customerService.getCustomers()).willReturn(customers);
@@ -62,7 +62,7 @@ public class CustomerControllerTest {
 
     @Test
     public void detail() throws Exception {
-        Customer customer = new Customer("mike6321", Role.GENERAL,30);
+        final Customer customer = new Customer("mike6321", Role.GENERAL,30);
         given(customerService.getCustomer("mike6321")).willReturn(customer);
 
         mockMvc.perform(get("/Customer/mike6321"))
@@ -77,12 +77,15 @@ public class CustomerControllerTest {
     //{"role":"GENERAL","point":30}
     @Test
     public void Create() throws Exception {
+
+        Customer customer = new Customer("mike6321",Role.GENERAL,30);
         mockMvc.perform(post("/Customer")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\"role\":\"GENERAL\",\"point\":30}"))
                 .andExpect(status().isCreated())
                 .andExpect(header().string("location","/Customer/mike6321"))
-                .andExpect(content().string("{}"))
+                .andExpect(content().string("{1234}"))
+
         ;
     }
 }

@@ -3,6 +3,7 @@ package com.github.fourteam.pikachu.week1.junwoo.spring.domain;
 
 import com.github.fourteam.pikachu.week1.junwoo.spring.dto.Customer;
 import com.github.fourteam.pikachu.week1.junwoo.spring.dto.Role;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,7 +14,8 @@ import org.springframework.stereotype.Component;
  * Time : 8:19 오후
  */
 @Component
-public class AutorityCheckGeneralCustomerRepositoryImpl implements AuthorityCheckRepository{
+@Qualifier("autorityCheckGeneralCustomerRepositoryImpl")
+public class AutorityCheckGeneralCustomerRepositoryImpl implements AuthorityCheckRepository {
 
     @Override
     public boolean checkRole(Customer customer) {

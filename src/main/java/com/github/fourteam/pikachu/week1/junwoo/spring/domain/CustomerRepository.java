@@ -16,5 +16,5 @@ import java.util.List;
 public interface CustomerRepository {
     List<Customer> findAll();
 
-    Customer findById(String id);
+    Customer findById(final String id);
 }
