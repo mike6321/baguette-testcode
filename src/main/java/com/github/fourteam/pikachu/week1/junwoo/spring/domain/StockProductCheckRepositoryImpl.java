@@ -18,4 +18,5 @@ public class StockProductCheckRepositoryImpl implements StockCheckRepository{
     public boolean checkStock(Product product) {
         return product.getPrdStk() != 0;
     }
+
 }

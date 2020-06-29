@@ -2,12 +2,12 @@ package com.github.fourteam.pikachu.week1.junwoo.impl;
 
 import com.github.fourteam.pikachu.week1.junwoo.dto.cutomer.Customer;
 import com.github.fourteam.pikachu.week1.junwoo.dto.role.Role;
-import com.github.fourteam.pikachu.week1.junwoo.impl.authority.ExecutivesCustomerAuthorityCheckImpl;
 import com.github.fourteam.pikachu.week1.junwoo.impl.authority.GeneralCustomerAuthorityCheckImpl;
 import com.github.fourteam.pikachu.week1.junwoo.interfaces.authority.AuthorityCheck;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 
 /**
  * Project : pikachu

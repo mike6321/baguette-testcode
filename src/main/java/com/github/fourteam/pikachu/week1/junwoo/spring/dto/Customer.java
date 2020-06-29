@@ -2,7 +2,6 @@ package com.github.fourteam.pikachu.week1.junwoo.spring.dto;
 
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 
 /**
  * Project : pikachu

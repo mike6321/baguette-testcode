@@ -35,7 +35,7 @@ public class StockProductCheckController {
 
         stockProductCheckService.checkProductStock(product);
 
-        URI createdUri = linkTo(StockProductCheckController.class).slash(product.getPrdId()).toUri();
+        URI createdUri = linkTo(StockProductCheckController.class).slash(product.getGiftId()).toUri();
 
         return ResponseEntity.created(createdUri).body(product);
     }
