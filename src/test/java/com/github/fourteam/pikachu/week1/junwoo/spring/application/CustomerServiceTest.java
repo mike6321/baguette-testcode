@@ -1,8 +1,8 @@
 package com.github.fourteam.pikachu.week1.junwoo.spring.application;
 
+import com.github.fourteam.pikachu.week1.junwoo.spring.domain.CustomerRepository;
 import com.github.fourteam.pikachu.week1.junwoo.spring.dto.Customer;
 import com.github.fourteam.pikachu.week1.junwoo.spring.dto.Role;
-import com.github.fourteam.pikachu.week1.junwoo.spring.domain.CustomerRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 import static org.mockito.BDDMockito.given;
 
 /**

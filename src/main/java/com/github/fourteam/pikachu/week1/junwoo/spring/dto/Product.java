@@ -1,7 +1,6 @@
 package com.github.fourteam.pikachu.week1.junwoo.spring.dto;
 
 import lombok.Builder;
-import lombok.NoArgsConstructor;
 
 /**
  * Project : pikachu
@@ -14,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class Product {
     private Long prdId;
     private Integer prdStk;
-    private Integer giftId;
+    private Long giftId;
     private Integer giftStk;
 
 
@@ -26,7 +25,15 @@ public class Product {
         return prdStk;
     }
 
-    public Product(Long prdId, Integer prdStk, Integer giftId, Integer giftStk) {
+    public Long getGiftId() {
+        return giftId;
+    }
+
+    public Integer getGiftStk() {
+        return giftStk;
+    }
+
+    public Product(Long prdId, Integer prdStk, Long giftId, Integer giftStk) {
         this.prdId = prdId;
         this.prdStk = prdStk;
         this.giftId = giftId;

@@ -83,7 +83,7 @@ public class CustomerControllerTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\"role\":\"GENERAL\",\"point\":30}"))
                 .andExpect(status().isCreated())
-                .andExpect(header().string("location","/Customer/mike6321"))
+                .andExpect(header().string("location","/customer/mike6321"))
                 .andExpect(content().string("{1234}"))
 
         ;

@@ -5,7 +5,7 @@ import com.github.fourteam.pikachu.week1.junwoo.spring.dto.Role;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 /**
  * Project : pikachu
