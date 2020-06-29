@@ -40,4 +40,9 @@ public class NormalCustomer implements Customer {
     public boolean checkGift(Product product) {
         return product.getGiftProduct().getStock() > 0L;
     }
+
+    @Override
+    public void usePoint(Long spendPoint) {
+        point = point - spendPoint;
+    }
 }

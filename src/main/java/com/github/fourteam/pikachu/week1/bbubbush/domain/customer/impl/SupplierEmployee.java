@@ -44,4 +44,9 @@ public class SupplierEmployee implements Employee {
     public boolean checkGift(Product product) {
         return product.getGiftProduct().getStock() >= 10L;
     }
+
+    @Override
+    public void usePoint(Long spendPoint) {
+        point = point - spendPoint;
+    }
 }

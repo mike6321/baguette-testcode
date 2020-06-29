@@ -46,4 +46,9 @@ public class ImpossibleOrderCustomer implements Customer {
     public boolean checkGift(Product product) {
         return false;
     }
+
+    @Override
+    public void usePoint(Long spendPoint) {
+        // do not spend point.
+    }
 }

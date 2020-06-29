@@ -4,11 +4,12 @@ import com.github.fourteam.pikachu.week1.bbubbush.domain.customer.Cunsumer;
 import com.github.fourteam.pikachu.week1.bbubbush.domain.product.GiftProduct;
 import com.github.fourteam.pikachu.week1.bbubbush.domain.product.Product;
 import com.github.fourteam.pikachu.week1.bbubbush.domain.product.impl.SalesProduct;
+import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
 
 public class BlackCustomerTest {
     @Test
@@ -62,5 +63,17 @@ public class BlackCustomerTest {
 
         // then
         assertFalse(guessFalse);
+    }
+
+    @Test
+    public void usePoint_fail() {
+        // given
+        Cunsumer cunsumer = new BlackCustomer(1000L);
+
+        // when
+        cunsumer.usePoint(100L);
+
+        // then
+        assertThat(cunsumer.getPoint(), is(equalTo(1000L)));
     }
 }
