@@ -47,6 +47,8 @@ public class ProductTest {
                 .build());
     }
 
+
+    //2주차 요구사항 1. 상품에 대한 재고 체
     @Test
     public void 상품재고여부확인() {
         //given
@@ -60,7 +62,9 @@ public class ProductTest {
         assertTrue(product.checkProduct());
     }
 
-    @Test
+
+    //3주차 요구사항 2. 포인트로 구매 가능한 상품 목록이 10개 이상인지 조회
+   @Test
     public void 구매가능상품목록() {
         //given
         /*Customer customer = Customer.builder()
@@ -70,8 +74,8 @@ public class ProductTest {
 
         //when
         //그냥 Customer 생성? mock 활용?
-        when(customer.getPoint()).thenReturn(4000L);
-        when(customer.chkPrdListInfo(products)).thenReturn(true);
+        //when(customer.getPoint()).thenReturn(4000L);
+        //when(customer.chkPrdListInfo(products)).thenReturn(true);
 
         //then
         assertTrue(customer.chkPrdListInfo(products));
