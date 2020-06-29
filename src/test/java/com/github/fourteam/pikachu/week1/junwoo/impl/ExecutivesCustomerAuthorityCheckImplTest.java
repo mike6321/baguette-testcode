@@ -7,10 +7,8 @@ import com.github.fourteam.pikachu.week1.junwoo.impl.authority.ExecutivesCustome
 import com.github.fourteam.pikachu.week1.junwoo.interfaces.authority.AuthorityCheck;
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.List;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 
 
 /**

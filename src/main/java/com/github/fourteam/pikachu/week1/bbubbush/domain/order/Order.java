@@ -7,4 +7,10 @@ import java.util.List;
 
 public interface Order {
     boolean validationBeforeOrder(Cunsumer cunsumer, List<Product> products);
+
+    Cunsumer getCunsumer();
+
+    List<Product> getProducts();
+
+    long getTotalPaymentPrice();
 }
