@@ -27,3 +27,25 @@ y
 Isrc/main/java/com/github/fourteam/pikachu/week1/junwoo/dto/gift/Gift.java,b/3/b357e95ad1e455131da039a7b3953226dff50b22
 ˆ
 Xsrc/test/java/com/github/fourteam/pikachu/week1/junwoo/impl/stock/GiftStockImplTest.java,b/a/ba42f6285fb531a507f8bc07c59bfd0f12dc0208
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+”
+dsrc/test/java/com/github/fourteam/pikachu/week1/bbubbush/domain/customer/impl/BlackCustomerTest.java,9/2/924915c1821a0754be4ea0a1a5a76d41e406ced3
+u
+Esrc/test/java/com/github/fourteam/pikachu/week1/imesung/GiftTest.java,4/a/4a631d0454647a9c964c2e804085d919c98c293e
+’
+bsrc/test/java/com/github/fourteam/pikachu/week1/bbubbush/domain/product/impl/SalesProductTest.java,7/e/7e06989189f94531b1d7f6d7c3862d32c82cc1a8
+“
+csrc/test/java/com/github/fourteam/pikachu/week1/bbubbush/domain/customer/impl/ShopEmployeeTest.java,5/c/5c09ad12aead3aa4c9e4aa54668230279e3774b1
+x
+Hsrc/test/java/com/github/fourteam/pikachu/week1/imesung/ProductTest.java,3/a/3abbcff4ef3895bde20b863ab6e75e8b2db75571
+”
+dsrc/test/java/com/github/fourteam/pikachu/week1/bbubbush/domain/order/impl/OnlineOrderSheetTest.java,1/f/1fd96e4210e6e798d768c5bb6e7d04cb70fefb86
+7
+pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+…
+Usrc/main/java/com/github/fourteam/pikachu/week1/imesung/domain/customer/Customer.java,8/7/87c9412fea1ca9cc1777612ef0190d3ed47eda32
+y
+Isrc/test/java/com/github/fourteam/pikachu/week1/imesung/CustomerTest.java,1/e/1e89dce83abd8d07a06a40c8f73feb2090126d46
+H
+FourTeam ìš”êµ¬ì‚¬í•­.md,f/9/f96ece3a0112e095872913ad615d3ba8abc99531
