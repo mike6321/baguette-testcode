@@ -31,4 +31,6 @@ public interface Cunsumer {
     boolean checkGift(Product product);
 
     Long getPoint();
+
+    void setPoint(Long point);
 }

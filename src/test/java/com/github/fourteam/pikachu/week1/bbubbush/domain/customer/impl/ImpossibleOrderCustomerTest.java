@@ -8,8 +8,9 @@ import com.github.fourteam.pikachu.week1.bbubbush.domain.product.impl.SalesProdu
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.*;
 
 public class ImpossibleOrderCustomerTest {
     @Test
@@ -63,6 +64,18 @@ public class ImpossibleOrderCustomerTest {
 
         // then
         assertFalse(guessFalse);
+    }
+
+    @Test
+    public void usePoint_fail() {
+        // given
+        Cunsumer cunsumer = new ImpossibleOrderCustomer(1000L);
+
+        // when
+        cunsumer.setPoint(100L);
+
+        // then
+        assertThat(cunsumer.getPoint(), is(equalTo(1000L)));
     }
 
 }

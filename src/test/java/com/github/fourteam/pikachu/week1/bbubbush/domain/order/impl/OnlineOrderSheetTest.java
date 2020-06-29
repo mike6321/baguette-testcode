@@ -2,7 +2,6 @@ package com.github.fourteam.pikachu.week1.bbubbush.domain.order.impl;
 
 import com.github.fourteam.pikachu.week1.bbubbush.domain.customer.Cunsumer;
 import com.github.fourteam.pikachu.week1.bbubbush.domain.customer.impl.NormalCustomer;
-import com.github.fourteam.pikachu.week1.bbubbush.domain.order.OnlineOrderSheet;
 import com.github.fourteam.pikachu.week1.bbubbush.domain.order.Order;
 import com.github.fourteam.pikachu.week1.bbubbush.domain.product.GiftProduct;
 import com.github.fourteam.pikachu.week1.bbubbush.domain.product.Product;
