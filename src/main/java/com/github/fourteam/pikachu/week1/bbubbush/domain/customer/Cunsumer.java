@@ -32,5 +32,5 @@ public interface Cunsumer {
 
     Long getPoint();
 
-    void usePoint(Long spendPoint);
+    void setPoint(Long point);
 }

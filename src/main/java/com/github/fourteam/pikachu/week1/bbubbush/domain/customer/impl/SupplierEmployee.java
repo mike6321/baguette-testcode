@@ -46,7 +46,7 @@ public class SupplierEmployee implements Employee {
     }
 
     @Override
-    public void usePoint(Long spendPoint) {
-        point = point - spendPoint;
+    public void setPoint(Long point) {
+        this.point = point;
     }
 }

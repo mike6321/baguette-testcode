@@ -71,7 +71,7 @@ public class BlackCustomerTest {
         Cunsumer cunsumer = new BlackCustomer(1000L);
 
         // when
-        cunsumer.usePoint(100L);
+        cunsumer.setPoint(100L);
 
         // then
         assertThat(cunsumer.getPoint(), is(equalTo(1000L)));

@@ -48,7 +48,7 @@ public class ImpossibleOrderCustomer implements Customer {
     }
 
     @Override
-    public void usePoint(Long spendPoint) {
+    public void setPoint(Long point) {
         // do not spend point.
     }
 }

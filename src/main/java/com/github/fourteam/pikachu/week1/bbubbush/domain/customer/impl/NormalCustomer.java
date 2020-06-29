@@ -42,7 +42,7 @@ public class NormalCustomer implements Customer {
     }
 
     @Override
-    public void usePoint(Long spendPoint) {
-        point = point - spendPoint;
+    public void setPoint(Long point) {
+        this.point = point;
     }
 }
