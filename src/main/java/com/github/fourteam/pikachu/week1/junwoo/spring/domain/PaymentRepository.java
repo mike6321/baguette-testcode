@@ -1,22 +1,19 @@
 package com.github.fourteam.pikachu.week1.junwoo.spring.domain;
 
-import com.github.fourteam.pikachu.week1.junwoo.spring.dto.Customer;
-import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import com.github.fourteam.pikachu.week1.junwoo.spring.dto.Customer;
+import com.github.fourteam.pikachu.week1.junwoo.spring.dto.Order;
+import com.github.fourteam.pikachu.week1.junwoo.spring.dto.Product;
+import org.springframework.stereotype.Repository;
 
 /**
  * Project : pikachu
  *
  * @author : jwdeveloper
  * @comment :
- * Time : 4:54 오후
+ * Time : 10:24 오후
  */
 @Repository
-public interface CustomerRepository {
-    List<Customer> findAll();
-
-    Customer findById(final String id);
-
-    Customer save(Customer customer);
+public interface PaymentRepository {
+     void payment(Order order, Product product, Customer customer);
 }
