@@ -39,5 +39,10 @@ public class BlackCustomer implements Customer {
         return false;
     }
 
+    @Override
+    public void setPoint(Long point) {
+        // do not spend point.
+    }
+
 
 }

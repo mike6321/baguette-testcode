@@ -119,6 +119,7 @@ public class CustomerTest {
 
     }
 
+    //3주차 요구사항 1. 현재 회원 자산 조회
     @Test
     public void 자산확인() {
         //given

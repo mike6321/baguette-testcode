@@ -44,4 +44,10 @@ public class ShopEmployee implements Employee {
     public boolean checkGift(Product product) {
         return product.getGiftProduct() == null;
     }
+
+    @Override
+    public void setPoint(Long point) {
+        this.point = point;
+    }
+
 }
