@@ -38,4 +38,11 @@ public class CustomerRepositoryImpl implements CustomerRepository {
                         .findFirst()
                         .orElse(null);
     }
+
+    @Override
+    public Customer save(Customer customer) {
+        customers.add(customer);
+
+        return customer;
+    }
 }

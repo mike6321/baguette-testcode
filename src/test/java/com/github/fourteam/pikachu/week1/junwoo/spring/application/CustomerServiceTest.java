@@ -60,4 +60,11 @@ public class CustomerServiceTest {
 
         assertThat(customer.getPoint(),is(30));
     }
+
+    @Test
+    public void addCustomer() {
+
+        Customer created = customerService.addCustomer(new Customer("jwdeveloper", Role.BLACKCONSUMER, 10000));
+        assertThat(created.getUserId(), is("jwdeveloper"));
+    }
 }
