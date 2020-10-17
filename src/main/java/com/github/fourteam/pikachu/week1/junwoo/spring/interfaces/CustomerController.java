@@ -46,8 +46,12 @@ public class CustomerController {
 
         Customer customer1 = new Customer(userId, role, point);
 
+        customerService.addCustomer(customer1);
+
         URI location = new URI("/customer/mike6321");//+customer1.getUserId());
         ResponseEntity.created(location).body("{1234}");
         return ResponseEntity.created(location).body("{1234}");
     }
 }
+// http POST localhost:8080/customer userId=mike6321 role=GENERAL point=30
+// http GET localhost:8080/customer

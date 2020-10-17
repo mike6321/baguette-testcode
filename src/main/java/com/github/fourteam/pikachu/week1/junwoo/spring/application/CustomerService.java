@@ -34,4 +34,9 @@ public class CustomerService {
 
         return customers;
     }
+
+    public Customer addCustomer(Customer customer) {
+
+        return customerRepository.save(customer);
+    }
 }
